@@ -1,0 +1,16 @@
+[project]
+name = "agentic-ai-training"
+version = "0.1.0"
+description = "First agentic-AI project: an Inbox Agent built with the OpenAI Agents SDK"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "openai-agents>=0.0.15",
+    "python-dotenv>=1.0.1",
+    "gradio>=5.22.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+]

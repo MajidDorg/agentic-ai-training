@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "from_name": "Sara Khan",
+    "from_email": "sara.khan@brightside-co.com",
+    "date": "2026-06-10 09:14",
+    "subject": "Proposal feedback — can we meet Thursday?",
+    "body": "Hi, thanks for sending over the proposal. The team reviewed it and we're mostly happy, but we have two questions about the timeline and the pricing for phase 2. Could we jump on a quick call this Thursday at 2pm to go through them? Let me know if that works for you."
+  },
+  {
+    "id": "2",
+    "from_name": "LinkedIn",
+    "from_email": "notifications@linkedin.com",
+    "date": "2026-06-10 08:02",
+    "subject": "You appeared in 11 searches this week",
+    "body": "Your profile is getting noticed. See who's been searching for you and grow your network. Upgrade to Premium to see the full list of people who viewed your profile."
+  },
+  {
+    "id": "3",
+    "from_name": "Omar Haddad",
+    "from_email": "omar@haddad-logistics.com",
+    "date": "2026-06-09 18:47",
+    "subject": "Invoice #2041 is overdue",
+    "body": "Hello, this is a reminder that invoice #2041 for last month's consulting work is now 6 days overdue. The amount is 4,500 AED. Could you please confirm when we can expect payment? Happy to resend the invoice if you didn't receive it."
+  },
+  {
+    "id": "4",
+    "from_name": "Google Calendar",
+    "from_email": "calendar-notification@google.com",
+    "date": "2026-06-09 20:00",
+    "subject": "Reminder: Dentist appointment tomorrow at 5:00 PM",
+    "body": "This is a reminder that you have an event scheduled: Dentist appointment, tomorrow from 5:00 PM to 5:45 PM. Location: Marina Dental Clinic."
+  },
+  {
+    "id": "5",
+    "from_name": "Lina Probst",
+    "from_email": "lina.probst@nova-design.studio",
+    "date": "2026-06-09 15:30",
+    "subject": "Quick question about the workshop",
+    "body": "Hi! I really enjoyed your AI workshop last week. I wanted to ask — do you offer a follow-up session for teams? We're a studio of 8 people and we'd love something tailored to our design workflow. What would that look like, and roughly what would it cost?"
+  }
+]

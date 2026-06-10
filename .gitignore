@@ -1,0 +1,18 @@
+# Secrets — never commit these
+.env
+.env.*
+!.env.example
+
+# Google credentials (only relevant for the optional level-up Gmail exercise)
+credentials.json
+token.json
+
+# Python / uv
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS noise
+.DS_Store
+Thumbs.db
