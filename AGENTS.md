@@ -22,20 +22,21 @@ Do these steps in order. After each one, tell the user in one sentence what happ
    - Then **STOP and ask the user to paste their OpenAI API key** into `.env` after `OPENAI_API_KEY=`. You cannot do this for them — it's their private secret. Wait for them to confirm they've done it and saved the file.
    - Never print, log, or commit the key.
 
-4. **Verify.** Run `uv run check_setup.py`. If everything is ✅, tell the user they're ready and should open `notebooks/01_concepts.ipynb` and select the `.venv` kernel. If anything is ❌, help them fix that one thing, then run the check again.
+4. **Verify.** Run `uv run check_setup.py`. If everything is ✅, tell the user they're ready and should open `1_openai_agents_sdk/1_lab1_agents.ipynb` and select the `.venv` kernel. If anything is ❌, help them fix that one thing, then run the check again.
 
 ## Rules
 
 - **Do not** touch `.env`, `credentials.json`, or `token.json` beyond creating `.env` from the example. These hold secrets.
 - **Do not** edit `uv.lock` or `pyproject.toml` unless the user asks.
-- The `level-up/` folder is an **optional advanced exercise** (real Gmail). Ignore it during normal setup unless the user explicitly asks for it.
 - Keep explanations short and beginner-friendly. The user is learning — narrate what each command does.
 
 ## Project map
 
-- `notebooks/01_concepts.ipynb` — teaching notebook (start here): agent, tool, structured output.
-- `project/inbox_agent.py` — the main project: the agent logic + a terminal approval loop.
-- `project/sample_inbox.json` — the fake inbox the agent reads.
-- `project/app.py` — the Gradio GUI (the showcase). Run with `uv run project/app.py`.
-- `level-up/` — optional: connect to real Gmail (needs extra setup; see its README).
+- `1_openai_agents_sdk/` — Module 1 (today): the OpenAI Agents SDK labs.
+  - `1_lab1_agents.ipynb` — agent basics + async (start here).
+  - `2_lab2_cold_email.ipynb` — tools, agents-as-tools, handoffs.
+  - `3_lab3_structured_guardrails.ipynb` — structured outputs + guardrails.
+  - `AGENTS.md` — **Lab 4 build instructions** (the four student projects + scope rules). Read that file when the user asks you to build Lab 4.
+  - `lab4_data/` — mock data for the Lab 4 projects.
+- Future modules (AutoGen, LangGraph, CrewAI, MCP, n8n) get their own folders later.
 - `check_setup.py` — prints whether the machine is ready.

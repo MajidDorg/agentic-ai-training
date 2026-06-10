@@ -1,6 +1,6 @@
 # Setup — get ready for class
 
-Works on **macOS** and **Windows**. The whole point: by the end you can open `notebooks/01_concepts.ipynb` and run the first cell.
+Works on **macOS** and **Windows**. The whole point: by the end you can open `1_openai_agents_sdk/1_lab1_agents.ipynb` and run the first cell.
 
 You have two ways to do this. **Way A (recommended)** lets Codex do most of it for you. **Way B** is the manual version if you'd rather type the commands yourself.
 
@@ -34,7 +34,7 @@ You have two ways to do this. **Way A (recommended)** lets Codex do most of it f
    ```
    uv run check_setup.py
    ```
-   When you see **🎉 All set**, open `notebooks/01_concepts.ipynb`, click **Select Kernel** (top right), and choose the `.venv` option.
+   When you see **🎉 All set**, open `1_openai_agents_sdk/1_lab1_agents.ipynb`, click **Select Kernel** (top right), and choose the `.venv` option.
 
 ---
 
@@ -70,9 +70,9 @@ You have two ways to do this. **Way A (recommended)** lets Codex do most of it f
 
 ## Running things
 
-- **The teaching notebook:** open `notebooks/01_concepts.ipynb`, pick the `.venv` kernel, run cells with **Shift + Enter**.
-- **The project in the terminal:** `uv run project/inbox_agent.py`
-- **The GUI (the showcase):** `uv run project/app.py`, then open the link it prints. To share with family, change the last line to `demo.launch(share=True)`.
+- **The labs:** open the notebooks in `1_openai_agents_sdk/` (start with `1_lab1_agents.ipynb`), pick the `.venv` kernel, run cells with **Shift + Enter**.
+- **Lab 4 (your project):** you'll build this with Codex during class — pick a project, sketch the architecture, then let Codex build the notebook and a GUI app.
+- **Running a GUI app** (once you've built one): `uv run <path>/app.py`, then open the link it prints. To share it, change the last line to `demo.launch(share=True)`.
 
 ## Common snags (Windows)
 

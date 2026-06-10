@@ -58,7 +58,7 @@ def main() -> int:
 
     print()
     if ok:
-        print("🎉 All set. You're ready — open notebooks/01_concepts.ipynb to begin.")
+        print("🎉 All set. You're ready — open 1_openai_agents_sdk/1_lab1_agents.ipynb to begin.")
         return 0
     print("Some checks failed. Fix the ❌ items above, then run this again.")
     return 1
