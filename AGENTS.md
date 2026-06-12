@@ -28,7 +28,28 @@ Do these steps in order. After each one, tell the user in one sentence what happ
 
 - **Do not** touch `.env`, `credentials.json`, or `token.json` beyond creating `.env` from the example. These hold secrets.
 - **Do not** edit `uv.lock` or `pyproject.toml` unless the user asks.
+- **NEVER install CrewAI into this root project.** No `uv add crewai`, no editing the root `pyproject.toml` to add it. CrewAI is a standalone CLI tool: `uv tool install crewai` — and each crew project under `2_crewai/` manages its **own** dependencies automatically when the user runs `crewai run` inside it. The root project is for Module 1 only.
 - Keep explanations short and beginner-friendly. The user is learning — narrate what each command does.
+
+## Module 2 (CrewAI) setup
+
+When the user is working in `2_crewai/`:
+
+1. **Install the CrewAI CLI (one time):** `uv tool install crewai` — then check `crewai --version`. If the command isn't found, the user may need to open a new terminal.
+2. **Per project:** copy that project's `.env.example` to `.env` inside the project folder (same stop-and-ask rule for keys as above — `OPENAI_API_KEY`, and `SERPER_API_KEY` where listed).
+3. **Run from inside the project folder:** `cd 2_crewai/<project>` then `crewai run`. The first run installs that project's own dependencies — this is normal and can take a few minutes.
+4. Read `2_crewai/AGENTS.md` when the user asks you to build their own crew project.
+
+**If the root project got broken** (e.g. CrewAI was mistakenly added to it), recover with:
+
+```
+git fetch origin
+git reset --hard origin/main
+uv sync
+uv tool install crewai
+```
+
+(`git reset --hard` discards changes to the repo's own files; the user's untracked work — notebooks they created, `.env` files — is not touched.)
 
 ## Project map
 
@@ -38,5 +59,6 @@ Do these steps in order. After each one, tell the user in one sentence what happ
   - `3_lab3_structured_guardrails.ipynb` — structured outputs + guardrails.
   - `AGENTS.md` — **Lab 4 build instructions** (the four student projects + scope rules). Read that file when the user asks you to build Lab 4.
   - `lab4_data/` — mock data for the Lab 4 projects.
-- Future modules (AutoGen, LangGraph, CrewAI, MCP, n8n) get their own folders later.
+- `2_crewai/` — Module 2: three CrewAI projects (debate → financial_researcher → stock_picker) + `AGENTS.md` (the your-own-crew build instructions).
+- Future modules (LangGraph, AutoGen, MCP, n8n) get their own folders later.
 - `check_setup.py` — prints whether the machine is ready.

@@ -17,6 +17,19 @@ Then, **inside each project folder** you want to run:
    ```
    (The first run installs that project's dependencies automatically.)
 
+## If your setup broke — reset to a safe point
+
+If CrewAI got installed into the root project by mistake (or anything else went sideways), run from the **repo root**:
+
+```
+git fetch origin
+git reset --hard origin/main
+uv sync
+uv tool install crewai
+```
+
+This restores the repo's own files to the clean published state and reinstalls correctly. Your untracked work (notebooks you created, your `.env` files) is not touched. Then `cd` into a project and `crewai run`.
+
 ## The projects
 
 | # | Project | New concepts |
