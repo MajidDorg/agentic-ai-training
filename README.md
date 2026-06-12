@@ -22,9 +22,9 @@ The philosophy: you're being trained to think like an **architect who directs AI
 | # | Module | Status |
 |---|---|---|
 | 1 | **[OpenAI Agents SDK](1_openai_agents_sdk/)** | ✅ available |
-| 2 | AutoGen | added in its session |
+| 2 | **[CrewAI](2_crewai/)** | ✅ available |
 | 3 | LangGraph | added in its session |
-| 4 | CrewAI | added in its session |
+| 4 | AutoGen | added in its session |
 | 5 | Model Context Protocol (MCP) | added in its session |
 | 6 | n8n (no-code automation) | added in its session |
 
