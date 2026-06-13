@@ -78,23 +78,17 @@ If a project seems to "need" something on this list, **use a simple Python funct
 
 ### The project options
 
-The student picks ONE. Each gives the **end result** + the **functional requirements**. **Do not over-engineer** — build the smallest in-scope graph that delivers the result.
+The student picks ONE. Each gives the **business problem**, the **build** (inside the Labs 1–2 toolkit), and an **additional challenge** that stretches them with one more in-scope concept. **Do not over-engineer** — build the smallest in-scope graph that delivers the result, then add the challenge.
 
-#### Project 1 — Research-and-notify assistant
-- **End result:** the user asks something that needs current info; the agent searches the web, summarizes the answer, and "notifies" the user (writes it to a local file).
-- **Requirements:** a `search` tool (Serper) + a custom `notify` tool that appends to `output/notifications.md`; conditional routing so the model calls tools when needed; checkpointed memory so it remembers the conversation.
+#### Project 1 — Sales: Pre-Call Lead Briefing Agent
+- **Business problem:** sales reps walk into calls knowing nothing about the prospect.
+- **Build:** the rep names a company; the agent **searches** it online and summarizes what they do + recent news, keeps the rep's prospect list in **memory** across the chat, and **pushes** a tight pre-call briefing to the rep's phone (the Pushover `send_notification` tool). Conditional routing so it only calls tools when needed.
+- **Additional challenge:** add a **second custom tool** `log_to_crm(note)` that appends each briefing to a local `output/crm.md` — so every prospect researched is both pushed *and* logged. *(In-scope: a second custom Tool alongside search + push.)*
 
-#### Project 2 — Personal assistant with persistent memory
-- **End result:** a chatbot that remembers you across restarts — your name, preferences, and past chat.
-- **Requirements:** `SqliteSaver` persistence keyed by a `thread_id`; show that after a kernel restart it still knows you. Tools optional.
-
-#### Project 3 — Tool-using Q&A agent
-- **End result:** an agent that answers questions by deciding which of its tools to use.
-- **Requirements:** at least two tools (e.g. `search` + one custom mock tool of your design); `ToolNode` + `tools_condition` routing; the loop back to the chatbot.
-
-#### Project 4 — LangGraph-ify an earlier project
-- **End result:** the same end result as the student's Module-1 or Module-2 project — rebuilt as a LangGraph graph.
-- **Requirements:** map the old design across (steps → nodes, routing → conditional edges, tools → Tools/mock functions). Add a short `COMPARISON.md`: 3–5 bullets on which framework fit this problem better, and why.
+#### Project 2 — Retail: Competitor Price Watch
+- **Business problem:** a shop owner can't manually track competitors' prices all day.
+- **Build:** the owner names a competitor + product; the agent **searches** the current price, keeps the watchlist **and the shop's own price** in **memory**, and **pushes** an alert to the owner's phone.
+- **Additional challenge:** the agent **compares** the found price against the owner's price (held in memory) and **pushes only when a competitor undercuts** — not on every check. *(In-scope: conditional tool-use driven by memory + the system prompt.)*
 
 ---
 
