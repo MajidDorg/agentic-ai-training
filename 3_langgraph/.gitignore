@@ -1,0 +1,15 @@
+# Module-3 local environment + secrets
+.venv/
+.env
+.env.*
+!.env.example
+
+# Runtime artifacts (created when you run the labs)
+memory.db
+memory.db-*
+output/
+
+# Python / Jupyter noise
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

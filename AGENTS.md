@@ -51,6 +51,15 @@ uv tool install crewai
 
 (`git reset --hard` discards changes to the repo's own files; the user's untracked work — notebooks they created, `.env` files — is not touched.)
 
+## Module 3 (LangGraph) setup
+
+When the user is working in `3_langgraph/`, it's a **self-contained project** (its own `.venv` + `.env`, like the crews — separate from Module 1):
+
+1. **From inside `3_langgraph/`:** `cd 3_langgraph` then `uv sync` — installs LangGraph into `3_langgraph/.venv`.
+2. **Keys:** copy `3_langgraph/.env.example` to `3_langgraph/.env`; STOP and ask the user for `OPENAI_API_KEY` and `SERPER_API_KEY` (free, https://serper.dev). Same secret rules as above — never print or commit.
+3. **Open** `1_lab1_graphs.ipynb` and select the **`3_langgraph/.venv`** kernel (not the root one).
+4. Read `3_langgraph/AGENTS.md` when the user asks you to build their own Lab 3 project.
+
 ## Project map
 
 - `1_openai_agents_sdk/` — Module 1 (today): the OpenAI Agents SDK labs.
@@ -60,5 +69,6 @@ uv tool install crewai
   - `AGENTS.md` — **Lab 4 build instructions** (the four student projects + scope rules). Read that file when the user asks you to build Lab 4.
   - `lab4_data/` — mock data for the Lab 4 projects.
 - `2_crewai/` — Module 2: three CrewAI projects (debate → financial_researcher → stock_picker) + `AGENTS.md` (the your-own-crew build instructions).
-- Future modules (LangGraph, AutoGen, MCP, n8n) get their own folders later.
+- `3_langgraph/` — Module 3: two LangGraph labs (build a graph → tools + memory) + `AGENTS.md` (the your-own-graph build instructions). Self-contained `uv` project.
+- Future modules (AutoGen, MCP, n8n) get their own folders later.
 - `check_setup.py` — prints whether the machine is ready.
