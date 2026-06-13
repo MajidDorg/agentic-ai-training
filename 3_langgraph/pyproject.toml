@@ -10,6 +10,7 @@ dependencies = [
     "langchain>=0.3.0",
     "langchain-openai>=0.2.0",
     "langchain-community>=0.3.0",
+    "requests>=2.31.0",
     "python-dotenv>=1.0.1",
     "pydantic>=2.0",
     "gradio>=5.22.0",
